@@ -101,3 +101,52 @@ code {
   margin-top: 26px;
   color: var(--muted);
 }
+
+.nav-back {
+  margin-bottom: 12px;
+}
+
+.nav-back a {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.post-header h1 {
+  margin: 0 0 8px 0;
+  font-size: clamp(24px, 3.5vw, 34px);
+  letter-spacing: -0.02em;
+}
+
+.post-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.post-body {
+  margin-top: 22px;
+}
+
+.post-body p {
+  margin: 0 0 1rem 0;
+}
+
+.post-body p:last-child {
+  margin-bottom: 0;
+}
+
+.post-list {
+  margin: 8px 0 0 0;
+  padding-left: 1.15rem;
+}
+
+.post-list li {
+  margin: 0.35rem 0;
+}
+
+.post-list-meta {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}

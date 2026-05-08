@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Algorithms in the Real World — ll931110again.github.io</title>
+    <meta
+      name="description"
+      content="How abstract algorithms show up in routing, search, and systems we use every day."
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <nav class="nav-back">
+        <a href="/">← Home</a>
+      </nav>
+
+      <article class="post">
+        <header class="post-header">
+          <h1>Algorithms in the Real World</h1>
+          <p class="post-meta"><time datetime="2026-05-08">May 8, 2026</time></p>
+        </header>
+
+        <div class="post-body">
+          <p>
+            Textbooks often present algorithms as self-contained puzzles: sort this array, find the shortest
+            path, pack these weights. In practice, the interesting part is rarely the isolated algorithm—it is
+            how that idea composes with messy data, latency budgets, and human behavior.
+          </p>
+          <p>
+            Consider routing. Maps do not simply “run Dijkstra” on the planet; they blend graph search with
+            traffic models, road classifications, and live probes. The algorithm is one layer in a stack
+            where the inputs drift by the second and wrong assumptions cost real time.
+          </p>
+          <p>
+            Search engines and recommendation systems lean on ranking and retrieval structures built from
+            decades of IR and machine learning. What users experience as “it knew what I meant” is often a
+            pipeline: candidate generation, scoring, diversity constraints, and guardrails—each step a place
+            where classic algorithmic thinking meets product tradeoffs.
+          </p>
+          <p>
+            Even infrastructure you never see—load balancing, caching, consensus for databases—rests on
+            algorithms chosen for failure modes, not just Big-O on a whiteboard. The real world rewards
+            robustness, observability, and iteration as much as asymptotic elegance.
+          </p>
+          <p class="muted">
+            If you are learning algorithms, studying the textbook form still matters: it sharpens the mental
+            models you later adapt when the problem stops looking like a homework set.
+          </p>
+        </div>
+      </article>
+
+      <footer class="footer">
+        <a href="https://github.com/ll931110again/ll931110again.github.io">Source on GitHub</a>
+      </footer>
+    </main>
+  </body>
+</html>
