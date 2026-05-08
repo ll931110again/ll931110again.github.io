@@ -9,6 +9,22 @@
       content="How abstract algorithms show up in routing, search, and systems we use every day."
     />
     <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="/js/math-init.js"></script>
   </head>
   <body>
     <main class="container">
@@ -24,40 +40,31 @@
 
         <div class="post-body">
           <p>
-            There is a common chargin among competitive programmers: you spend all your time training for algorithms, maybe a bit of time preparing
-            for Leetcode, and complaining that your day to day software engineering job has no algorithms what so ever. What if, your interview is done
-            algorithmically, and your day to day work is also algorithm heavy?
+            Textbooks often present algorithms as self-contained puzzles: sort this array, find the shortest
+            path, pack these weights. In practice, the interesting part is rarely the isolated algorithm—it is
+            how that idea composes with messy data, latency budgets, and human behavior.
           </p>
-
           <p>
-            Throughout my career, I had seen a few examples of that from my own experience. It's true that finding those examples are quite rare
-            in the software engineering landscape, but I had learned how to discover these problems.
+            Consider routing. Maps do not simply “run Dijkstra” on the planet; they blend graph search with
+            traffic models, road classifications, and live probes. The textbook relaxation step
+            \(d[v] \leftarrow \min\bigl(d[v],\, d[u] + w(u,v)\bigr)\) is still there under the hood—just
+            wrapped in layers where edge weights are no longer static. The algorithm is one layer in a stack
+            where the inputs drift by the second and wrong assumptions cost real time.
           </p>
-
           <p>
-            With that in mind, let's get started.
+            Search engines and recommendation systems lean on ranking and retrieval structures built from
+            decades of IR and machine learning. What users experience as “it knew what I meant” is often a
+            pipeline: candidate generation, scoring, diversity constraints, and guardrails—each step a place
+            where classic algorithmic thinking meets product tradeoffs.
           </p>
-
-          <h2>
-            Scheduling and resource allocation problems.
-          </h2>
-
           <p>
-            In this problem, we are given some resources to be allocated to different tenants. For example, a cloud provider may need to allocate
-            computing power to different users, or networking bandwidth among different services. In this particular example, we will consider the most
-            general form: we are given a network of links, and 
-
-            The goal is to maximize the utilization of the resources given the constraints.
-
-            Formally, we can model this as a linear programming problem:
-
-            $$
-            \begin{align*}
-            \max_{x} & \sum_{i} c_i x_i \\
-            \text{s.t.} & \sum_{i} a_{ij} x_i \leq b_j \quad \forall j \\
-            & x_i \geq 0 \quad \forall i
-            \end{align*}
-            $$
+            Even infrastructure you never see—load balancing, caching, consensus for databases—rests on
+            algorithms chosen for failure modes, not just asymptotics like \(O(n \log n)\) on a whiteboard.
+            The real world rewards robustness, observability, and iteration as much as elegance in the bound.
+          </p>
+          <p class="muted">
+            If you are learning algorithms, studying the textbook form still matters: it sharpens the mental
+            models you later adapt when the problem stops looking like a homework set.
           </p>
         </div>
       </article>

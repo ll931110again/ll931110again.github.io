@@ -150,3 +150,10 @@ code {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+/* KaTeX: avoid horizontal overflow on narrow screens */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+}
